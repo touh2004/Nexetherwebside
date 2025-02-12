@@ -1,0 +1,313 @@
+.end-container {
+  width: 100vw;
+  height: 50%;
+  margin-bottom: 0px;
+  backdrop-filter: blur(45px);
+  background: rgba(112, 112, 112, 0.06);
+  position: relative;
+  padding: 40px 0 0 0;
+  text-align: center;
+}
+
+.sort {
+  display: flex;
+  gap: 200px;
+  padding: 45px;
+}
+
+.first img {
+  height: 150px;
+  margin: -20px 0 0 40px;
+  width: 150px;
+}
+
+.second {
+  margin: -60px 0 0 -100px;
+  text-align: center;
+  padding: 40px;
+}
+
+.second h1 {
+  font-size: 1.7em;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.second p {
+  font-size: 0.8em;
+  padding-bottom: 20px;
+  text-align: center;
+  margin-left: 20px;
+  color: #ffffff;
+}
+
+.second input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #cccccc07;
+  border-radius: 20px;
+  font-size: 10px;
+}
+
+.second button {
+  position: relative;
+  display: inline-block;
+  margin: 20px 20px;
+  border-radius: 20px;
+  border: none;
+  font-weight: bold;
+  color: #ffffffbd;
+  background: none;
+  border: #d59835 solid;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 0;
+  transition: color 0.1s ease, box-shadow 0.1s ease;
+  box-shadow: 0 4px 6px #0000001a;
+}
+
+.second button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 300%;
+  height: 100%;
+  background: linear-gradient(100deg, #d59835, #0b0a07a5);
+  background-size: 200% 200%;
+  z-index: -1;
+  border: #d5983500 solid;
+  animation: wave 4s linear infinite;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.1s ease;
+}
+
+.second button:hover {
+  color: #ffffff;
+  border: transparent;
+}
+
+.second button:hover::before {
+  transform: scaleX(1);
+  border-color: transparent;
+}
+
+@keyframes wave {
+  0% {
+    background-position: 100% 50%;
+  }
+
+  25% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  75% {
+    background-position: 50% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.third h1 {
+  margin: -24px 0 20px -20px;
+  text-align: left;
+  font-size: 1.7em;
+}
+
+.third a {
+  display: grid;
+  color: #dbcc99;
+  padding-bottom: 20px;
+  font-size: 18px;
+  text-align: left;
+  background-color: transparent;
+  text-decoration: none;
+  margin-left: -20px;
+}
+
+.third .product-link {
+  margin-right: 15px;
+  color: #d59835;
+  transition: all 0.3s ease;
+}
+
+.third .product-link:hover {
+  color: #d59835;
+  transform: scale(1.05);
+  text-decoration: none;
+  filter: drop-shadow(0 0 6px transparent);
+  transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fourth h1 {
+  margin-top: -22px;
+  font-size: 1.7em;
+}
+
+.fourth a {
+  font-size: 25px;
+  display: grid;
+  color: #dbcc99;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.fourth .social-icon {
+  font-size: 30px;
+  margin-right: 15px;
+  color: #d59835;
+  transition: all 0.3s ease;
+}
+
+.fourth .social-icon:hover {
+  color: #d59835;
+  transform: scale(1.2);
+  text-decoration: none;
+}
+
+.fourth .social-icon:hover {
+  filter: drop-shadow(0 0 8px #d59835);
+  transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fourth .social-icon:hover {
+  transform: scale(1.2) rotate(-15deg);
+}
+
+@media screen and (max-width: 600px) {
+  .sort {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    align-items: center;
+  }
+
+  .first img {
+    height: 100px;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+  }
+
+  .second {
+    margin: 0;
+    text-align: left;
+    padding: 20px;
+  }
+
+  .second h1 {
+    font-size: 1.5em;
+  }
+
+  .second p {
+    font-size: 0.9em;
+  }
+
+  .second input {
+    font-size: 12px;
+  }
+
+  .second button {
+    padding: 10px 10px;
+    font-size: 0.4rem;
+    left: 0;
+    width: 100%;
+  }
+
+  .third h1 {
+    font-size: 1.4em;
+  }
+
+  .third a {
+    font-size: 16px;
+  }
+
+  .fourth h1 {
+    font-size: 1.5em;
+  }
+
+  .fourth a {
+    font-size: 20px;
+  }
+
+  .fourth .social-icon {
+    font-size: 25px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .sort {
+    flex-direction: column;
+    gap: 50px;
+    padding: 30px;
+  }
+
+  .first img {
+    height: 130px;
+    width: 130px;
+  }
+
+  .second {
+    margin: 0;
+    text-align: center;
+    padding: 25px;
+  }
+
+  .second h1 {
+    font-size: 1.6em;
+  }
+
+  .second p {
+    font-size: 1em;
+  }
+
+  .second input {
+    font-size: 12px;
+    width: 90%;
+  }
+
+  .second button {
+    padding: 10px 30px;
+    font-size: 1rem;
+    left: 0;
+    width: 25%;
+  }
+
+  .third h1 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .third a {
+    font-size: 17px;
+    text-align: center;
+  }
+
+  .fourth h1 {
+    font-size: 1.6em;
+    text-align: center;
+  }
+
+  .fourth a {
+    font-size: 22px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .fourth .social-icon {
+    font-size: 28px;
+    align-items: center;
+    text-align: center;
+  }
+}

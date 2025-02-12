@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/*-------------------------------- General Reset ---------------------------------*/
+#home{
+  background-attachment: fixed;
+}
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+}
+
+body,
+h1,
+p,
+a {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+
+section {
+    min-height: 100vh;
+    overflow: hidden; /* Important for parallax */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+.home-section, .about-section, .product-section, .contact-section, .end-section, .loading-section{
+  display: flex;
+  justify-content: center;
+  background-attachment: fixed;
+  }

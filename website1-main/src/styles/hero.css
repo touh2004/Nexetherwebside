@@ -1,0 +1,130 @@
+/* General styles (not mobile-specific) */
+.hero-content h1 {
+  font-size: 4.5rem;
+  margin-bottom: 20px;
+  font-family: "Times New Roman", Times, serif;
+  margin-top: 10%;
+  color: #dbcc99;
+  margin-left: 50px;
+  line-height: 1.2;
+}
+
+.hero-content h2 {
+  font-family: "Times New Roman", Times, serif;
+  color: #dbcc99;
+  margin-left: 55px;
+  line-height: 1.2;
+  opacity: 0;
+  animation: fadeIn 3s 2s ease-in-out forwards;
+}
+
+.hero-content p {
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-left: 50px;
+  font-family: "Times New Roman", Times, serif;
+  opacity: 0;
+  animation: fadeIn 3s 3s ease-in-out forwards;
+}
+
+.hero-content span {
+  font-size: 1em;
+  letter-spacing: 2px;
+  border-right: 5px solid;
+  display: inline-block;
+  background: linear-gradient(#dbcc99, #d59835);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: "kalam";
+  vertical-align: top;
+  letter-spacing: 0.15em;
+  animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.home-section {
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 1.5s ease-in-out;
+  padding: 10px 20px;
+  min-height: 100vh;
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hero-content {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+    margin: 20px 0;
+    margin-left: 0;
+  }
+
+  .hero-content h2 {
+    font-size: 1.4rem;
+    margin: 15px 0;
+    margin-left: 0;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+    margin: 15px 0;
+    margin-left: 0;
+  }
+
+  .hero-content span {
+    font-size: 2.8rem;
+  }
+}
+
+/* ... any other CSS you have ... */

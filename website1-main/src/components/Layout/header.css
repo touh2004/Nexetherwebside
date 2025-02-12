@@ -1,0 +1,241 @@
+/* Navbar container */
+.navcontainer {
+  background-color: transparent;
+  padding-top: 20px;
+  left: 50px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  z-index: 1000;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  display: flex; /* Use flexbox for alignment */
+  justify-content: space-between; /* Space logo and menu */
+  align-items: center; /* Vertically center items */
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 10px 40px;
+  background-color: rgba(12, 12, 12, 0.415);
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.navbar .logo-img {
+  margin-left: 25px;
+  width: 95%;
+  height: 120px;
+}
+
+.navbar .logo span {
+  margin-left: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #a49849;
+}
+
+.navbar .logo span p {
+  font-size: 0.5em;
+}
+
+/* Navbar menu links */
+.menu {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  transition: transform 0.3s ease-in-out; /* Smooth transition for mobile menu */
+}
+
+.menu a {
+  font-size: 1.4em;
+  font-family: "Jura"; /* Correct font-family name */
+  text-decoration: none;
+  background: radial-gradient(circle, #dbcc99, #d59835);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.6);
+  position: relative;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: #d598358d;
+  transition: width 0.4s ease-in-out;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+.menu a:hover {
+  color: #c3b6b6;
+}
+
+.menu a.active {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.4em;
+}
+
+/* Hamburger Icon (Only for small screens) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1001; /* Ensure hamburger is above the menu */
+  position: absolute;
+  top: 20px;
+}
+
+.hamburger .bar {
+  width: 30px;
+  height: 3px;
+  background-color: #d59835;
+  margin: 5px 0;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  /* Adjust breakpoint as needed */
+  .navbar {
+    flex-direction: column; /* Stack logo and menu vertically */
+    align-items: center; /* Center items horizontally */
+    padding: 10px 20px; /* Adjust padding */
+  }
+
+  .logo {
+    margin-bottom: 10px; /* Add some space below the logo */
+  }
+
+  .logo-img {
+    margin-left: 0; /* Remove left margin on mobile */
+    width: 95%;
+    height: auto;
+  }
+
+  .hamburger {
+    display: block;
+    left: 98%;
+    width: 40px; /* Show hamburger on mobile */
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.85); /* Semi-transparent background */
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    transform: translateY(-100%); /* Hidden off-screen initially */
+    justify-content: center; /* Vertically center menu items */
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000; /* Ensure menu is above other content */
+  }
+
+  .menu.active {
+    transform: translateY(0); /* Slide in the menu */
+  }
+
+  .mobile-menu-content {
+    /* Style the content inside the mobile menu */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .mobile-menu-content a {
+    color: #826612; /* Set text color for mobile menu */
+    text-decoration: none;
+    font-size: 1.2rem; /* Adjust font size for mobile */
+  }
+
+  .mobile-menu-content a i {
+    /* Style the home icon */
+    margin-right: 10px;
+  }
+}
+
+/* Medium devices (tablets, 768px to 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .navbar {
+    padding: 10px 30px;
+  }
+
+  .navbar .logo-img {
+    width: 95%;
+    height: 100px;
+  }
+
+  .navbar .logo span {
+    font-size: 1.8rem;
+  }
+
+  .menu a {
+    font-size: 1.3em;
+    margin: 0 15px;
+  }
+
+  .menu a.active {
+    font-size: 1.3em;
+  }
+}
+
+/* Large devices (desktops, 1024px to 1440px) */
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  .navbar {
+    padding: 10px 40px;
+  }
+
+  .navbar .logo-img {
+    width: 95%;
+    height: 120px;
+  }
+
+  .navbar .logo span {
+    font-size: 2rem;
+  }
+
+  .menu a {
+    font-size: 1.4em;
+    margin: 0 20px;
+  }
+
+  .menu a.active {
+    font-size: 1.4em;
+  }
+}
+
+/* Extra large devices (desktops, greater than 1440px) */
+@media screen and (min-width: 1441px) {
+  .navbar {
+    padding: 10px 50px; /* Adjust as needed */
+  }
+
+  .navbar .logo-img {
+    width: 95%; /* Adjust as needed */
+    height: 140px; /* Adjust as needed */
+  }
+
+  .menu a {
+    font-size: 2em; /* Adjust as needed */
+    margin: 0 25px; /* Adjust as needed */
+  }
+}

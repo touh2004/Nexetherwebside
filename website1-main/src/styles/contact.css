@@ -1,0 +1,366 @@
+.contact-section {
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+}
+
+#contact {
+  padding: 40px 0;
+}
+
+.left-con {
+  flex: 1;
+  margin-top: 7%;
+  margin-left: -540px;
+  position: relative;
+}
+
+.right-con {
+  margin-left: 68.9%;
+  margin-top: -9%;
+  margin-bottom: 250px;
+  padding: 71.8px;
+  border-top-left-radius: 185px;
+  border-bottom-left-radius: 185px;
+  width: 31%;
+  height: 87%;
+  background-color: #ffc107b7;
+}
+
+.right-con h2 {
+  font-size: 3em;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+.left-con h1 {
+  font-size: 3.5em;
+  background: linear-gradient(#dbcc99, #ffc107);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.left-con p {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.left-con h2 {
+  color: #ededed;
+  font-weight: bold;
+  font-family: sans-serif;
+  margin-bottom: 20px;
+}
+
+.left-con p {
+  color: #9c9a9a;
+  line-height: 1.6;
+  font-size: 1.2em;
+}
+
+.primary-btn:hover {
+  color: #fff;
+}
+
+.primary-btn:hover::before {
+  width: 100%;
+}
+
+.info-block {
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  margin-bottom: 40px;
+}
+
+.info-block p {
+  color: #fff;
+  font-size: 1.2em;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 15px;
+  padding: 10px;
+  color: #fff;
+  font-size: 24px;
+  background-color: #2926261a;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.social-icons a:hover {
+  color: #1b1818b6;
+  background-color: #fff;
+  transform: scale(1.1) rotate(360deg);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.call-section {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+}
+
+.call-section p {
+  margin: 5px 0;
+}
+
+.hidden-card.visible {
+  display: block;
+  background: transparent;
+}
+
+.hidden-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hidden-card input,
+.hidden-card textarea {
+  background: none;
+  border-bottom: 1px solid grey;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 10px;
+  padding: 20px;
+  color: #434040;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.hidden-card input:focus,
+.hidden-card textarea:focus {
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.hidden-card textarea {
+  height: 100px;
+  width: 86%;
+  resize: none;
+}
+
+.hidden-card button {
+  background: black;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 15px;
+  border: solid 2px #d59835;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hidden-card button:hover {
+  background: #d59835;
+  transform: translateY(-2px);
+}
+
+.hidden-card form {
+  align-items: center;
+  justify-content: center;
+}
+
+.hidden-card input::placeholder,
+.hidden-card textarea::placeholder {
+  color: rgb(255, 255, 255);
+}
+
+.contact-section {
+  position: relative;
+}
+
+.button-message-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.button-message-container button {
+  margin-right: 10px;
+}
+
+.button-message-container .message-display {
+  text-align: right;
+  color: #d59835;
+  font-weight: bold;
+}
+
+.container button {
+  background: transparent;
+  color: #fff;
+  font-size: 12px;
+  padding: 45px;
+  border-bottom: 2px solid #767272;
+  border-right: 2px solid #767272;
+  border-top: none;
+  border-left: none;
+  border-radius: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.container .hidden:hover {
+  background: white;
+  color: black;
+}
+
+.container button:hover {
+  background: linear-gradient(#0a0a0a, #767272);
+}
+
+.container form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  height: 100%;
+}
+
+.container input {
+  background-color: transparent;
+  border-bottom: 2px solid #767272;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  margin: 8px 0;
+  padding: 10px 15px;
+  color: #fff;
+  font-weight: 100;
+  font-size: 13px;
+  border-radius: 8px;
+  width: 100%;
+  outline: none;
+}
+
+.form-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+
+.container a {
+  color: #ccc;
+}
+
+.hidden-card {
+  display: none;
+  position: absolute;
+  background: transparent;
+  width: 30%;
+  backdrop-filter: blur(5px);
+  z-index: 1;
+}
+
+button.hide-button {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .left-con,
+  .right-con {
+    margin: 0;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .right-con {
+    background-color: #ffc107b7;
+    margin-top: 20px;
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .left-con h1 {
+    font-size: 2em;
+  }
+
+  .right-con h2 {
+    font-size: 2em;
+  }
+
+  .info-block {
+    flex-direction: column;
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+
+  .social-icons a {
+    font-size: 20px;
+    margin: 0 10px;
+    padding: 8px;
+  }
+
+  .hidden-card {
+    width: 90%;
+    position: static;
+    backdrop-filter: none;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .hidden-card input,
+  .hidden-card textarea {
+    font-size: 14px;
+    padding: 15px;
+  }
+
+  .hidden-card button {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .container button {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .button-message-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button-message-container button {
+    margin: 10px 0;
+  }
+
+  .button-message-container .message-display {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
